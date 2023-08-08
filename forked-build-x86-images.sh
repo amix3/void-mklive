@@ -87,8 +87,8 @@ build_variant() {
             LIGHTDM_SESSION=cinnamon
         ;;
         gnome)
-            PKGS="$PKGS $XORG_PKGS gnome firefox"
-            SERVICES="$SERVICES dbus elogind gdm NetworkManager polkitd"
+            PKGS="$PKGS $XORG_PKGS $EXTRA_PKGS gnome gnome-apps firefox"
+            SERVICES="$SERVICES dbus elogind gdm NetworkManager polkitd power-profiles-daemon bluetoothd"
         ;;
         kde)
             PKGS="$PKGS $XORG_PKGS $EXTRA_PKGS kde5 kde5-baseapps kcalc kdeconnect octoxbps spectacle gwenview elisa okular partitionmanager filelight flatpak-kcm xdg-utils xdg-desktop-portal xdg-desktop-portal-kde xdg-user-dirs xdg-user-dirs-gtk libappindicator adwaita-icon-theme AppStream ark firefox"
