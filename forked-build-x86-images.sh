@@ -56,7 +56,7 @@ build_variant() {
     A11Y_PKGS="espeakup void-live-audio brltty"
     PKGS="dialog cryptsetup lvm2 mdadm void-docs-browse xtools-minimal xmirror $A11Y_PKGS $GRUB_PKGS"
     XORG_PKGS="xorg-minimal xf86-input-evdev xf86-input-libinput xf86-input-vmmouse xf86-input-wacom xorg-video-drivers setxkbmap xauth xsetroot font-misc-misc terminus-font dejavu-fonts-ttf orca"
-    EXTRA_PKGS="htop neovim mpv mpv-mpris intel-media-driver upower power-profiles-daemon libspa-bluetooth wget curl flatpak p7zip dtrx unzip bash-completion git bluez ntp gnome-keyring rsync dkms zstd vsv exfat-utils fuse-exfat ntfs-3g gvfs-afc gvfs-mtp gvfs-smb udisks2"
+    EXTRA_PKGS="htop neovim mpv mpv-mpris intel-media-driver upower power-profiles-daemon libspa-bluetooth wget curl flatpak p7zip dtrx unzip bash-completion git bluez ntp gnome-keyring rsync dkms zstd vsv exfat-utils fuse-exfat ntfs-3g gvfs-afc gvfs-mtp gvfs-smb udisks2 ufw"
     SERVICES="sshd"
 
 
@@ -92,7 +92,7 @@ build_variant() {
         ;;
         kde)
             PKGS="$PKGS $XORG_PKGS $EXTRA_PKGS kde5 kde5-baseapps kcalc kdeconnect octoxbps spectacle gwenview elisa okular partitionmanager filelight flatpak-kcm xdg-utils xdg-desktop-portal xdg-desktop-portal-kde xdg-user-dirs xdg-user-dirs-gtk libappindicator adwaita-icon-theme AppStream ark firefox"
-            SERVICES="$SERVICES dbus NetworkManager sddm polkitd power-profiles-daemon"
+            SERVICES="$SERVICES dbus NetworkManager sddm polkitd ufw power-profiles-daemon"
         ;;
         lxde)
             PKGS="$PKGS $XORG_PKGS lxde lightdm lightdm-gtk3-greeter gvfs-afc gvfs-mtp gvfs-smb udisks2 firefox"
